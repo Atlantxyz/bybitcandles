@@ -77,10 +77,9 @@ def plot_crypto_chart(symbol, interval='15', limit=100):
     except Exception as e:
         print(f"Ошибка: {e}")
 
-if __name__ == "__main__":
-    CRYPTO_SYMBOL = str(input("Введите пару (например BTCUSDT): ")).upper()
-    TIME_INTERVAL = str(input("Введите интервал (1, 3, 5, 15, 30, 60, 120, 240, 360, 720, D, M, W): "))
-    DATA_LIMIT = int(input("Введите лимит свечей (макс 200): "))
+CRYPTO_SYMBOL = str(input("Введите пару (например BTCUSDT): ")).upper()
+TIME_INTERVAL = str(input("Введите интервал (1, 3, 5, 15, 30, 60, 120, 240, 360, 720, D, M, W): "))
+DATA_LIMIT = int(input("Введите лимит свечей (макс 200): "))
 
-    print(f"Загрузка данных для {CRYPTO_SYMBOL}...")
-    plot_crypto_chart(CRYPTO_SYMBOL, TIME_INTERVAL, DATA_LIMIT)
+print(f"Загрузка данных для {CRYPTO_SYMBOL}...")
+plot_crypto_chart(CRYPTO_SYMBOL, TIME_INTERVAL, DATA_LIMIT)
